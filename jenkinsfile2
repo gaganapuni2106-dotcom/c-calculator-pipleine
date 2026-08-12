@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'make'
+            }
+        }
+
+        stage('Run') {
+            steps {
+                sh 'echo "10 20" | ./biggest'
+            }
+        }
+    }
+}
