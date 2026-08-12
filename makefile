@@ -1,13 +1,10 @@
-CC = gcc
-CFLAGS = -Wall -Wextra
+CC=gcc
 
-all: hello
+all:
+	$(CC) calculator.c -o calculator
 
-hello: hello.c
-	$(CC) $(CFLAGS) hello.c -o hello
-
-test: hello
-	./hello
+test:
+	./calculator
 
 clean:
-	rm -f hello
+	rm -f calculator
