@@ -3,7 +3,7 @@
 int main()
 {
     int a = 10;
-    int b = 2;
+    int b = 6;
 
     printf("Addition: %d\n", a + b);
     printf("Subtraction: %d\n", a - b);
