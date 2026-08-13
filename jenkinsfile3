@@ -1,16 +1,24 @@
 pipeline {
     agent any
 
+    parameters {
+        string(
+            name: 'NUMBER',
+            defaultValue: '5',
+            description: 'Enter the number for factorial'
+        )
+    }
+
     stages {
-        stage('Build Factorial') {
+        stage('Build') {
             steps {
-                sh 'make factorial'
+                sh 'make'
             }
         }
 
-        stage('Test Factorial') {
+        stage('Run Factorial') {
             steps {
-                sh 'make test-factorial'
+                sh "./factorial $NUMBER"
             }
         }
     }
