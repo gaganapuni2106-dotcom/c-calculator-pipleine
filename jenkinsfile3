@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build Factorial') {
+            steps {
+                sh 'make factorial'
+            }
+        }
+
+        stage('Test Factorial') {
+            steps {
+                sh 'make test-factorial'
+            }
+        }
+    }
+}
