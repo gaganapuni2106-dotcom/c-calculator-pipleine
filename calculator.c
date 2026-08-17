@@ -3,7 +3,7 @@
 int main()
 {
     int a = 10;
-    int b = 6;
+    int b = 5;
 
     printf("Addition: %d\n", a + b);
     printf("Subtraction: %d\n", a - b);
@@ -11,5 +11,4 @@ int main()
 
     return 0;
 }
-// webhook test
-// webhook test 2
+
