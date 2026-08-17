@@ -1,29 +1,11 @@
-pipeline {
-    agent any
-
-    stages {
-
-        stage('Build') {
-            steps {
-                sh 'make'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                sh 'make test'
-            }
-        }
-
+stage('Build') {
+    steps {
+        sh 'make calculator'
     }
+}
 
-    post {
-        success {
-            echo 'Pipeline completed successfully!'
-        }
-
-        failure {
-            echo 'Pipeline failed!'
-        }
+stage('Test') {
+    steps {
+        sh 'make test'
     }
 }
