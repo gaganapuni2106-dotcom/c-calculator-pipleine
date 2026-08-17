@@ -1,4 +1,4 @@
-CC = gcc
+iCC = gcc
 
 all: calculator biggest factorial
 
@@ -14,8 +14,7 @@ factorial:
 test:
 	./calculator
 
-test-factorial:
-	./factorial
+
 
 clean:
 	rm -f calculator biggest factorial
