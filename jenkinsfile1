@@ -1,11 +1,24 @@
-stage('Build') {
-    steps {
-        sh 'make calculator'
-    }
-}
+pipeline {
+    agent any
 
-stage('Test') {
-    steps {
-        sh 'make test'
+    stages {
+
+        stage('Build') {
+            steps {
+                sh 'make calculator'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'make test'
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline completed successfully!'
+        }
     }
 }
